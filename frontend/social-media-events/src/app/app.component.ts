@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { DefaultLayoutPageLoginRegisterComponent } from "./components/default-layout-page-login-register/default-layout-page-login-register.component";
 
 @Component({
   selector: 'app-root',
