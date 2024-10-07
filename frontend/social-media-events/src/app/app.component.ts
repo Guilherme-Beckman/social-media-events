@@ -10,5 +10,6 @@ import { DefaultLayoutPageLoginRegisterComponent } from "./components/default-la
   styleUrl: './app.component.css'
 })
 export class AppComponent {
+  
   title = 'social-media-events';
 }
