@@ -50,6 +50,10 @@ main {
     width: 30%;
     padding: 2rem 3rem;
     color: white;
+    transition: transform 0.5s cubic-bezier(0.25, 0.8, 0.25, 1), background-color 0.5s ease;
+  }
+  .card:hover {
+    transform: scale(0.99);
   }
  h2{
     text-align: left;
@@ -63,11 +67,13 @@ main {
     font-weight: 500;
     font-size: 24px;
     padding: 1rem;
+    cursor: pointer;
   }
   h4{
     font-weight: 500;
     font-size: 24px;
     text-align: center;
+    cursor: pointer;
   }
   label{
     font-weight: 300;
@@ -93,6 +99,10 @@ main {
     font-weight: 700;
     font-size: 24px;
     align-items: center;
+    transition: transform 0.5s cubic-bezier(0.25, 0.8, 0.25, 1), background-color 0.5s ease;
+  }
+  button:hover{
+    transform: scale(0.99);
   }
   .icons{
     text-align: center;
@@ -106,4 +116,8 @@ main {
     background-color: white;
     border-radius: 50%;
     padding: 2px;
+    cursor: pointer;
+  }
+  span{
+    font-weight: bold;
   }
