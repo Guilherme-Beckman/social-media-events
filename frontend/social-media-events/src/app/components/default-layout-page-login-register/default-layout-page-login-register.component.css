@@ -62,10 +62,16 @@ main {
     text-align: right;
     font-weight: 500;
     font-size: 24px;
+    padding: 1rem;
+  }
+  h4{
+    font-weight: 500;
+    font-size: 24px;
+    text-align: center;
   }
   label{
     font-weight: 300;
-    font-size: 24px
+    font-size: 24px;
   }
   input{
     border: none;
@@ -81,17 +87,12 @@ main {
   button{
     border-radius: 50px;
     border: none;
-    padding: 1rem;
+    padding: 0.75rem 7rem;
     text-align: center;
     color: black;
     font-weight: 700;
     font-size: 24px;
     align-items: center;
-  }
-  h4{
-    font-weight: 500;
-    font-size: 24px;
-    text-align: center;
   }
   .icons{
     text-align: center;
