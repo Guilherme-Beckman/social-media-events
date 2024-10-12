@@ -1,0 +1,30 @@
+.proguess-container {
+  padding: 1rem;
+  display: flex;
+  justify-content: space-evenly;
+}
+.step-circle {
+  width: 20px;
+  height: 20px;
+  border: 5px solid #000000;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  color: #ffffff;
+  transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+}
+.step-circle.active {
+  background-color: #000000;
+  color: #fff;
+}
+.steps {
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  margin-bottom: 20px;
+}
+.step-circle:hover {
+  background-color: #ffffff; 
+}
