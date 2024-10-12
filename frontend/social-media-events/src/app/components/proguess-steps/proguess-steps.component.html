@@ -1,7 +1,7 @@
 <div class="proguess-container">
   <div *ngFor="let steps of steps;let i = index"
-  (click)="currentStep=i"
-  [class.active]="currentStep>i"
+  (click)="onStepClick(i)"
+  [class.active]="currentStep>=i"
   class="step-circle"
   >
   </div>

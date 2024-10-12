@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, Input } from '@angular/core';
+import { Component, Output, EventEmitter} from '@angular/core';
 @Component({
   selector: 'app-proguess-steps',
   standalone: true,
@@ -10,4 +10,10 @@ import { Component, Input } from '@angular/core';
 export class ProguessStepsComponent {
   steps = [1,2,3];
   currentStep = 0;
+  @Output() currentStepChange = new EventEmitter();
+  
+  onStepClick(i: number){
+    this.currentStep = i;
+    this.currentStepChange.emit(this.currentStep);
+  }
 }
