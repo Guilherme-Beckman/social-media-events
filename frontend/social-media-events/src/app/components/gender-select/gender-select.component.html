@@ -1,1 +1,18 @@
-<p>gender-select works!</p>
+<div class="select-group">
+    <select id="gender" name="gender" [(ngModel)]="selectedGender" (change)="onGenderChange($event)">
+      <option value="" disabled selected>Selecione seu gênero</option>
+      <option value="masculino">Masculino</option>
+      <option value="feminino">Feminino</option>
+      <option value="nao-binario">Não binário</option>
+      <option value="transgenero">Transgênero</option>
+      <option value="genero-fluido">Gênero fluido</option>
+      <option value="outro">Outro</option>
+      <option value="prefiro-nao-dizer">Prefiro não dizer</option>
+    </select>
+  </div>
+  
+  <div *ngIf="isOtherSelected" class="select-group">
+    <label for="customGender">Digite seu gênero:</label>
+    <input type="text" id="customGender" [(ngModel)]="customGender">
+  </div>
+  
