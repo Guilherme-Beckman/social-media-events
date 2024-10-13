@@ -10,7 +10,11 @@
         <div>
             <label for="">{{ label2 }}</label>
             <br>
-            <input type="text" name="" id="">
+            <div class="password-container">
+                <input [type]="isPasswordVisible ? 'text':'password'" name="" id=""> 
+                <button (click)="tooglePasswordVisibility()">  <i [class]="isPasswordVisible ?'ri-eye-fill' : 'ri-eye-close-fill'"></i></button>    
+            </div>
+    
         </div>
         <h3>{{ underLineText }}</h3>
         <div class="submit-button">

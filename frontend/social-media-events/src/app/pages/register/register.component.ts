@@ -12,4 +12,10 @@ import { GenderSelectComponent } from '../../components/gender-select/gender-sel
 })
 export class RegisterComponent {
   currentStep=0;
+
+  isPasswordVisible: boolean = false;
+  password: string ='';
+  tooglePasswordVisibility(){
+    this.isPasswordVisible = !this.isPasswordVisible;
+  }
 }

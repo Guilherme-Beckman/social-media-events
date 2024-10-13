@@ -24,12 +24,19 @@
       <div *ngIf="currentStep === 1">
         <div >
           <label for="password">Senha</label>
-          <input type="password" id="password" name="password">
+          <div class="password-container">
+            <input [type]="isPasswordVisible ? 'text':'password'" name="" id=""> 
+            <button (click)="tooglePasswordVisibility()">  <i [class]="isPasswordVisible ?'ri-eye-fill' : 'ri-eye-close-fill'"></i></button>    
+        </div>
         </div>
         
         <div >
           <label for="confirmPassword">Confirmar senha</label>
-          <input type="password" id="confirmPassword" name="confirmPassword">
+          <div class="password-container">
+            <input [type]="isPasswordVisible ? 'text':'password'" name="" id=""> 
+            <button (click)="tooglePasswordVisibility()">  <i [class]="isPasswordVisible ?'ri-eye-fill' : 'ri-eye-close-fill'"></i></button>    
+        </div>
+
         </div>
         
         <div >

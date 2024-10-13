@@ -177,3 +177,19 @@ span {
 
 
 }
+.password-container{
+  display: flex;
+}
+.password-container button{
+  width: 20px;
+  height: 20px;
+  padding: 0;
+  background: none;
+}
+.password-container i{
+  background-color: white;
+  font-size: 20px;
+  border-radius: 50%;
+  padding: 5px;
+
+}
