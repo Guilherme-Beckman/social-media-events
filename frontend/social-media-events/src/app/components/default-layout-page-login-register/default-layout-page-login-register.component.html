@@ -5,13 +5,13 @@
         <div>
             <label for="something">{{ label1 }}</label>
             <br>
-            <input type="text" name="" id="">
+            <input type="text" name="" id="" required>
         </div>
         <div>
             <label for="">{{ label2 }}</label>
             <br>
             <div class="password-container">
-                <input [type]="isPasswordVisible ? 'text':'password'" name="" id=""> 
+                <input [type]="isPasswordVisible ? 'text':'password'" name="" id="" required> 
                 <button (click)="tooglePasswordVisibility()">  <i [class]="isPasswordVisible ?'ri-eye-fill' : 'ri-eye-close-fill'"></i></button>    
             </div>
     
