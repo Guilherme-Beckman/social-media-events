@@ -15,4 +15,10 @@ export class DefaultLayoutPageLoginRegisterComponent {
   @Input() primaryButtonText: string = "";
   @Input() h4Text: string = "";
   @Input() h4TextSpan: string = "";
+
+  isPasswordVisible: boolean = false;
+  password: string ='';
+  tooglePasswordVisibility(){
+    this.isPasswordVisible = !this.isPasswordVisible;
+  }
 }

@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+*{
+    font-family: Inter, sans-serif;
+}
+.select-group{
+justify-content: center;
+text-align: center;
+padding: 1rem;
+}
+select{
+font-size: 24px;
+padding: 0.5rem;
+border-radius: 50px;
+border: none;
+}
+input{
+    background: inherit;
+    border: none;
+    border-bottom: 1px solid white;
+    color: white;
+    font-size: 16px;
+    font-family: 300;
+}
+label{
+    font-size: 16px;
+    font-family: 300;
+}
+input:focus {
+    outline: none;
+  }

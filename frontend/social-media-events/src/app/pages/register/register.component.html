@@ -1,1 +1,81 @@
-<p>register works!</p>
+<main>
+    <div class="card">
+      <h2>Registro</h2>
+      
+      <!-- Passo 1: Informações básicas -->
+      <div *ngIf="currentStep === 0">
+        <div >
+          <label for="firstName">Nome</label>
+          <input type="text" id="firstName" name="firstName">
+        </div>
+        
+        <div >
+          <label for="lastName">Sobrenome</label>
+          <input type="text" id="lastName" name="lastName">
+        </div>
+        
+        <div >
+          <label for="email">Endereço Email</label>
+          <input type="email" id="email" name="email">
+        </div>
+      </div>
+  
+      <!-- Passo 2: Senha e Data de nascimento -->
+      <div *ngIf="currentStep === 1">
+        <div >
+          <label for="password">Senha</label>
+          <div class="password-container">
+            <input [type]="isPasswordVisible ? 'text':'password'" name="" id=""> 
+            <button (click)="tooglePasswordVisibility()">  <i [class]="isPasswordVisible ?'ri-eye-fill' : 'ri-eye-close-fill'"></i></button>    
+        </div>
+        </div>
+        
+        <div >
+          <label for="confirmPassword">Confirmar senha</label>
+          <div class="password-container">
+            <input [type]="isPasswordVisible ? 'text':'password'" name="" id=""> 
+            <button (click)="tooglePasswordVisibility()">  <i [class]="isPasswordVisible ?'ri-eye-fill' : 'ri-eye-close-fill'"></i></button>    
+        </div>
+
+        </div>
+        
+        <div >
+          <label for="birthDate">Data de nascimento</label>
+          <input type="date" id="birthDate" name="birthDate">
+        </div>
+      </div>
+  
+      <!-- Passo 3: Contato e Informações adicionais -->
+      <div *ngIf="currentStep === 2">
+        <div >
+          <label for="phone">Telefone</label>
+          <input type="tel" id="phone" name="phone" placeholder="(XX) XXXX-XXXX" pattern="\(\d{2}\) \d{4}-\d{4}" required>
+        </div>
+        
+        <div >
+          <label for="cpf">CPF:</label>
+          <input type="text" id="cpf" name="cpf" placeholder="XXX.XXX.XXX-XX" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" required>
+        </div>
+        <app-gender-select></app-gender-select>
+        <div class="submit-button">
+            <button type="submit">Registrar</button>
+        </div>
+      </div>
+      
+  
+      <!-- Componente de progressão dos passos -->
+      <app-proguess-steps (currentStepChange)="currentStep = $event"></app-proguess-steps>
+  
+      <!-- Login e redes sociais -->
+      <div *ngIf="currentStep === 0">
+        <h4>Já tem uma conta? <span>Login</span></h4>
+        
+        <div class="icons">
+          <i class="ri-google-fill"></i>
+          <i class="ri-facebook-fill"></i>
+          <i class="ri-instagram-fill"></i>
+        </div>
+      </div>
+    </div>
+  </main>
+  
