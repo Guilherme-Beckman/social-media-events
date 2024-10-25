@@ -18,18 +18,18 @@ import lombok.Data;
 public class UserModel {
 	@Id
 	@GeneratedValue(strategy = GenerationType.UUID)
-	private UUID user_id;
+	private UUID userId;
 	private String name;
 	private String lastname;
 	private String email;
 	private String password;
 	private String phone;
-	private LocalDate date_of_birth;
+	private LocalDate dateOfBirth;
 	private String cpf;
 	private String gender;
-	private String url_profile_picture;
+	private String urlProfilePicture;
 	private UserRole role;
-	private LocalDateTime created_at;
+	private LocalDateTime createdAt;
 	
 	public UserModel(UserDTO userDTO) {
 		this.name = userDTO.name();
@@ -37,11 +37,11 @@ public class UserModel {
 		this.email = userDTO.email();
 		this.password = userDTO.password();
 		this.phone = userDTO.phone();
-		this.date_of_birth = userDTO.date_of_birth();
+		this.dateOfBirth = userDTO.dateOfBirth();
 		this.cpf = userDTO.cpf();
 		this.gender = userDTO.gender();
-		this.url_profile_picture = userDTO.url_profile_picture();
+		this.urlProfilePicture = userDTO.urlProfilePicture();
 		this.role = UserRole.USER;
-		this.created_at = LocalDateTime.now();
+		this.createdAt = LocalDateTime.now();
 	}
 }

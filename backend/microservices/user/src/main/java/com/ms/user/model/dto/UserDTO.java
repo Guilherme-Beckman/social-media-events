@@ -8,10 +8,10 @@ public record UserDTO(
 		 String email,
 		 String password,
 		 String phone,
-		 LocalDate date_of_birth,
+		 LocalDate dateOfBirth,
 		 String cpf,
 		 String gender,
-		 String url_profile_picture
+		 String urlProfilePicture
 		) {
 
 }
