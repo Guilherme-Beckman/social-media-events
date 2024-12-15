@@ -1,10 +1,31 @@
+
 <main>
-    <section>
-        <h2></h2>
-        <button></button>
+    <div class="card">
+        <h2>{{ title }}</h2>
         <div>
-            <span>Or</span>
+            <label for="something">{{ label1 }}</label>
+            <br>
+            <input type="text" name="" id="" required>
         </div>
-        <button></button>
-    </section>
+        <div>
+            <label for="">{{ label2 }}</label>
+            <br>
+            <div class="password-container">
+                <input [type]="isPasswordVisible ? 'text':'password'" name="" id="" required> 
+                <button (click)="tooglePasswordVisibility()">  <i [class]="isPasswordVisible ?'ri-eye-fill' : 'ri-eye-close-fill'"></i></button>    
+            </div>
+    
+        </div>
+        <h3>{{ underLineText }}</h3>
+        <div class="submit-button">
+            <button>{{ primaryButtonText }}</button>
+        </div>
+    
+        <h4>{{ h4Text }}<span>{{ h4TextSpan }}</span></h4>
+        <div class="icons">
+            <i class="ri-google-fill"></i>
+            <i class="ri-facebook-fill"></i>
+            <i class="ri-instagram-fill"></i>
+        </div>
+    </div>
 </main>
